@@ -1,4 +1,5 @@
 const app = () => {
+
   const song = document.querySelector(".song");
   const play = document.querySelector(".play");
   const outline = document.querySelector(".moving-outline circle");
@@ -12,6 +13,7 @@ const app = () => {
 
   outline.style.strokeDasharray = outlineLenght;
   outline.style.strokeDashoffset = outlineLenght;
+
 
   sounds.forEach(sound => {
     sound.addEventListener("click", function() {
@@ -32,6 +34,9 @@ const app = () => {
     });
   });
 
+
+  //再生停止
+
   const checkPlaying = song => {
     if(song.paused) {
       song.play();
@@ -43,6 +48,9 @@ const app = () => {
       play.src = "./svg/play.svg";
     }
   };
+
+
+  //時間表示
 
   song.ontimeupdate = () => {
     let currentTime = song.currentTime;
