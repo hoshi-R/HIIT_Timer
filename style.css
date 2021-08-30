@@ -80,7 +80,7 @@ video {
 .time-display {
   position: absolute;
   top: 85%;
-  color: white;
+  color: #fff;
 }
 
 .play {
